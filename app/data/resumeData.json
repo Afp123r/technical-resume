@@ -1,28 +1,26 @@
 {
   "name": "NEOH WEI JIAN",
-  "title": "Internship",
+  "title": "Fresh Graduate | Computer Engineering",
   "email": "henryneoh22@gmail.com",
   "phone": "+60 17-301 4638",
-  "location": "Georgetown,Penang",
+  "location": "Georgetown, Penang",
   "website": "https://portfolio1.edgeone.app",
   "linkedin": "https://www.linkedin.com/in/henry-neoh-wei-jian-7b44362a0/?trk=opento_sprofile_details",
   "github": "https://github.com/johndoe",
-  "summary": "Experienced software engineer with a passion for creating efficient and scalable web applications. Skilled in React, Node.js, and cloud technologies.",
+  "summary": "Motivated and detail-oriented fresh graduate in Computer Engineering with strong academic background and hands-on project experience. Eager to contribute technical and teamwork skills in a dynamic work environment.",
   "skills": [
     {
       "category": "Programming Languages",
       "items": [
         "JavaScript",
-        "TypeScript",
         "Python",
-        "Go"
+        "C"
       ]
     },
     {
       "category": "Frontend",
       "items": [
         "React",
-        "Vue.js",
         "HTML5",
         "CSS3",
         "Tailwind CSS"
@@ -32,53 +30,18 @@
       "category": "Backend",
       "items": [
         "Node.js",
-        "Express",
-        "Django",
-        "GraphQL"
+        "Express"
       ]
     },
     {
       "category": "Databases",
       "items": [
         "MongoDB",
-        "PostgreSQL",
-        "Redis"
-      ]
-    },
-    {
-      "category": "DevOps",
-      "items": [
-        "Docker",
-        "Kubernetes",
-        "AWS",
-        "CI/CD"
+        "MySQL"
       ]
     }
   ],
-  "experience": [
-    {
-      "title": "Senior Software Engineer",
-      "company": "Tech Innovators Inc.",
-      "location": "San Francisco, CA",
-      "date": "Jan 2020 - Present",
-      "achievements": [
-        "Led the development of a microservices architecture, improving system scalability by 200%",
-        "Implemented a new CI/CD pipeline, reducing deployment time by 50%",
-        "Mentored junior developers, increasing team productivity by 30%"
-      ]
-    },
-    {
-      "title": "Software Engineer",
-      "company": "StartUp Solutions",
-      "location": "New York, NY",
-      "date": "Jun 2017 - Dec 2019",
-      "achievements": [
-        "Developed a real-time analytics dashboard using React and D3.js",
-        "Optimized database queries, improving application response time by 40%",
-        "Contributed to open-source projects, gaining recognition in the developer community"
-      ]
-    }
-  ],
+  "experience": [],
   "education": [
     {
       "degree": "Diploma in Computer Engineering",
@@ -89,14 +52,9 @@
   ],
   "certifications": [
     {
-      "name": "AWS Certified Solutions Architect",
+      "name": "AWS Certified Cloud Practitioner (optional)",
       "issuer": "Amazon Web Services",
       "date": "2022"
-    },
-    {
-      "name": "Google Cloud Professional Developer",
-      "issuer": "Google Cloud",
-      "date": "2021"
     }
   ],
   "languages": [
