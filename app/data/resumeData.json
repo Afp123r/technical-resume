@@ -1,11 +1,11 @@
 {
-  "name": "John Doe",
-  "title": "Senior Software Engineer",
-  "email": "john.doe@example.com",
-  "phone": "+1 (555) 123-4567",
-  "location": "San Francisco, CA",
-  "website": "https://johndoe.com",
-  "linkedin": "https://linkedin.com/in/johndoe",
+  "name": "NEOH WEI JIAN",
+  "title": "Internship",
+  "email": "henryneoh22@gmail.com",
+  "phone": "+60 17-301 4638",
+  "location": "Geaogetown,Penang",
+  "website": "https://portfolio1.edgeone.app",
+  "linkedin": "https://www.linkedin.com/in/henry-neoh-wei-jian-7b44362a0/?trk=opento_sprofile_details",
   "github": "https://github.com/johndoe",
   "summary": "Experienced software engineer with a passion for creating efficient and scalable web applications. Skilled in React, Node.js, and cloud technologies.",
   "skills": [
@@ -111,7 +111,11 @@
       "proficiency": "Native"
     },
     {
-      "language": "Spanish",
+      "language": "Mandarin",
+      "proficiency": "Intermediate"
+    },
+    {
+      "language": "Malay",
       "proficiency": "Intermediate"
     }
   ]
