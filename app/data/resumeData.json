@@ -81,16 +81,10 @@
   ],
   "education": [
     {
-      "degree": "Master of Science in Computer Science",
+      "diploma": "Diploma in Computer Engineering",
       "school": "Stanford University",
       "location": "Stanford, CA",
       "date": "2015 - 2017"
-    },
-    {
-      "degree": "Bachelor of Science in Software Engineering",
-      "school": "Massachusetts Institute of Technology",
-      "location": "Cambridge, MA",
-      "date": "2011 - 2015"
     }
   ],
   "certifications": [
