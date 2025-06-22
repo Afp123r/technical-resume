@@ -41,7 +41,12 @@
       ]
     }
   ],
-  "experience": [],
+  "experience": [
+  {
+    "position": "No professional experience yet",
+    "description": "Currently seeking opportunities to gain hands-on experience in the industry."
+  }
+],
   "education": [
     {
       "degree": "Diploma in Computer Engineering",
