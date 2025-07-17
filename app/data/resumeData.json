@@ -36,8 +36,9 @@
     {
       "category": "Databases",
       "items": [
-        "MongoDB",
-        "MySQL"
+        "MySQL",
+        "SQLite",
+        "PostgreSQL"
       ]
     }
   ],
