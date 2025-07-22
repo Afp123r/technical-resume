@@ -47,9 +47,9 @@ export default function Resume({ data }: ResumeProps) {
           </div>
         </div>
         <div className="ml-4">
-          {/* Profile image - replace src with your photo url if needed */}
+          {/* Sample image for profile photo */}
           <img
-            src="https://via.placeholder.com/100"
+            src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Elon_Musk_Royal_Society.jpg"
             alt="Profile"
             className="rounded-full w-24 h-24 object-cover border-2 border-blue-500"
           />
