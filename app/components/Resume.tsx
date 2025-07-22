@@ -47,12 +47,12 @@ export default function Resume({ data }: ResumeProps) {
           </div>
         </div>
         <div className="ml-4">
-          {/* Perfect circle profile image */}
+          {/* Profile image - square shape */}
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Elon_Musk_Royal_Society.jpg"
             alt="Profile"
-            className="rounded-full w-24 h-24 object-cover border-2 border-blue-500"
-            style={{ aspectRatio: "1 / 1" }}
+            className="w-24 h-24 object-cover border-2 border-blue-500"
+            style={{ borderRadius: '0' }}
           />
         </div>
       </header>
