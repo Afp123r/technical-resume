@@ -51,7 +51,7 @@ export default function Resume({ data }: ResumeProps) {
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Elon_Musk_Royal_Society.jpg"
             alt="Profile"
-            className="w-40 h-40 object-cover border-2 border-blue-500"
+            className="w-400 h-40 object-cover border-2 border-blue-500"
             style={{ borderRadius: '0' }}
           />
         </div>
