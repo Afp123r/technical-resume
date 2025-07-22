@@ -15,34 +15,44 @@ interface ResumeProps {
 export default function Resume({ data }: ResumeProps) {
   return (
     <div className="w-full max-w-[210mm] min-h-[297mm] bg-white text-gray-800 p-4 md:p-8 shadow-lg font-sans mx-auto">
-      <header className="mb-6 md:mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{data.name}</h1>
-        <p className="mt-1 text-lg md:text-xl text-blue-600">{data.title}</p>
-        <div className="flex flex-wrap gap-2 md:gap-4 mt-4 text-xs md:text-sm text-gray-600">
-          <div className="flex items-center">
-            <FaEnvelope className="mr-1 md:mr-2" />
-            <span className="break-all">{data.email}</span>
+      <header className="mb-6 md:mb-8 flex justify-between items-start">
+        <div>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{data.name}</h1>
+          <p className="mt-1 text-lg md:text-xl text-blue-600">{data.title}</p>
+          <div className="flex flex-wrap gap-2 md:gap-4 mt-4 text-xs md:text-sm text-gray-600">
+            <div className="flex items-center">
+              <FaEnvelope className="mr-1 md:mr-2" />
+              <span className="break-all">{data.email}</span>
+            </div>
+            <div className="flex items-center">
+              <FaPhone className="mr-1 md:mr-2" />
+              {data.phone}
+            </div>
+            <div className="flex items-center">
+              <FaMapMarkerAlt className="mr-1 md:mr-2" />
+              {data.location}
+            </div>
+            <div className="flex items-center">
+              <FaGlobe className="mr-1 md:mr-2" />
+              <span className="break-all">{data.website}</span>
+            </div>
+            <div className="flex items-center">
+              <FaLinkedin className="mr-1 md:mr-2" />
+              <span className="break-all">{data.linkedin}</span>
+            </div>
+            <div className="flex items-center">
+              <FaGithub className="mr-1 md:mr-2" />
+              <span className="break-all">{data.github}</span>
+            </div>
           </div>
-          <div className="flex items-center">
-            <FaPhone className="mr-1 md:mr-2" />
-            {data.phone}
-          </div>
-          <div className="flex items-center">
-            <FaMapMarkerAlt className="mr-1 md:mr-2" />
-            {data.location}
-          </div>
-          <div className="flex items-center">
-            <FaGlobe className="mr-1 md:mr-2" />
-            <span className="break-all">{data.website}</span>
-          </div>
-          <div className="flex items-center">
-            <FaLinkedin className="mr-1 md:mr-2" />
-            <span className="break-all">{data.linkedin}</span>
-          </div>
-          <div className="flex items-center">
-            <FaGithub className="mr-1 md:mr-2" />
-            <span className="break-all">{data.github}</span>
-          </div>
+        </div>
+        <div className="ml-4">
+          {/* Profile image - replace src with your photo url if needed */}
+          <img
+            src="https://via.placeholder.com/100"
+            alt="Profile"
+            className="rounded-full w-24 h-24 object-cover border-2 border-blue-500"
+          />
         </div>
       </header>
 
@@ -75,16 +85,14 @@ export default function Resume({ data }: ResumeProps) {
         <h2 className="pb-1 mb-3 text-xl md:text-2xl font-semibold text-gray-800 border-b-2 border-blue-500">
           Experience
         </h2>
-        {data.experience.map((job, index) => (
-          <div key={index} className="mb-4">
-            <h3 className="font-semibold text-gray-800">{job.title}</h3>
-            <p className="italic text-sm md:text-base text-gray-600">
-              {job.company} | {job.location}
-            </p>
-            <p className="text-xs md:text-sm text-gray-500">{job.date}</p>
-            <ul className="mt-2 text-sm md:text-base text-gray-700 list-disc list-inside">
-              {job.achievements.map((achievement, idx) => (
-                <li key={idx}>{achievement}</li>
+        {data.experience.map((exp, idx) => (
+          <div key={idx} className="mb-4">
+            <h3 className="text-lg font-semibold">{exp.title}</h3>
+            <p className="text-sm text-gray-700">{exp.company} &mdash; {exp.location}</p>
+            <p className="text-xs text-gray-500">{exp.date}</p>
+            <ul className="list-disc pl-5 mt-2 text-sm text-gray-700">
+              {exp.achievements.map((ach, i) => (
+                <li key={i}>{ach}</li>
               ))}
             </ul>
           </div>
@@ -95,13 +103,11 @@ export default function Resume({ data }: ResumeProps) {
         <h2 className="pb-1 mb-3 text-xl md:text-2xl font-semibold text-gray-800 border-b-2 border-blue-500">
           Education
         </h2>
-        {data.education.map((edu, index) => (
-          <div key={index} className="mb-2">
-            <h3 className="font-semibold text-gray-800">{edu.degree}</h3>
-            <p className="text-sm md:text-base text-gray-600">
-              {edu.school}, {edu.location}
-            </p>
-            <p className="text-xs md:text-sm text-gray-500">{edu.date}</p>
+        {data.education.map((edu, idx) => (
+          <div key={idx} className="mb-4">
+            <h3 className="text-lg font-semibold">{edu.degree}</h3>
+            <p className="text-sm text-gray-700">{edu.school} &mdash; {edu.location}</p>
+            <p className="text-xs text-gray-500">{edu.date}</p>
           </div>
         ))}
       </section>
@@ -110,33 +116,26 @@ export default function Resume({ data }: ResumeProps) {
         <h2 className="pb-1 mb-3 text-xl md:text-2xl font-semibold text-gray-800 border-b-2 border-blue-500">
           Certifications
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {data.certifications.map((cert, index) => (
-            <div key={index}>
-              <h3 className="font-semibold text-gray-700">{cert.name}</h3>
-              <p className="text-xs md:text-sm text-gray-600">
-                {cert.issuer}, {cert.date}
-              </p>
-            </div>
+        <ul className="list-disc pl-5">
+          {data.certifications.map((cert, idx) => (
+            <li key={idx} className="text-sm text-gray-700">
+              <span className="font-semibold">{cert.name}</span> - {cert.issuer} ({cert.date})
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       <section>
         <h2 className="pb-1 mb-3 text-xl md:text-2xl font-semibold text-gray-800 border-b-2 border-blue-500">
           Languages
         </h2>
-        <div className="flex flex-wrap gap-2 md:gap-4">
-          {data.languages.map((lang, index) => (
-            <div
-              key={index}
-              className="px-2 md:px-3 py-1 text-xs md:text-sm bg-gray-100 rounded-full"
-            >
-              <span className="font-semibold">{lang.language}:</span>{' '}
-              {lang.proficiency}
-            </div>
+        <ul className="list-disc pl-5">
+          {data.languages.map((lang, idx) => (
+            <li key={idx} className="text-sm text-gray-700">
+              {lang.language} - {lang.proficiency}
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
     </div>
   );
